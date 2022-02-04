@@ -1,0 +1,56 @@
+
+             Step 0 
+Download and install Git, Heroku cli  And Create Heroku Account
+
+           Step 1
+pip install gunicorn
+pip install whitenoise
+pip install django-heroku              // import django_heroku
+pip install dj_database_url            // import dj_database_url
+
+                     Step 2
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+                  Step 3
+'whitenoise.middleware.WhiteNoiseMiddleware',
+
+                 Step 4
+Creating Procfile
+web: gunicorn demo.wsgi --log-file -
+
+                Step 5
+django_heroku.settings(locals())
+
+              Step 6
+ALLOWED_HOSTS = ['nongarehub.herokuapp.com', '127.0.0.1']
+
+               Step 7
+Set Up Postgres Database
+
+                Step 8
+pip freeze  requirements.txt  { ডেসক্রিপশন এ গ্রেটার-দেন দেওয়া যাই না, সো ফ্রিজ এর পর  অবশ্যই গ্রেটার-দেন দিয়ে নিবেন }
+                     Step 9
+git config --global user.name
+git config --global user.email
+
+git init
+git add .
+git commit -m 'command something'
+git push -u origin
+ 
+          Step 10
+heroku create [app name]
+heroku login
+heroku settings  
+
+
+
+selenium-using-python-geckodriver-executable-needs-to-be-in-path
