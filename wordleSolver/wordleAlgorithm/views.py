@@ -15,7 +15,7 @@ def show(request):
     wd.get("https://www.powerlanguage.co.uk/wordle/")
     localStorage=wd.execute_script("return window.localStorage;")
     wd.quit()
-    main_dict= json.loads(localStorage['gameState'])
+    main_dict= json.loads(localStorage['nyt-wordle-state'])
     x=main_dict['solution']
     return render(request,'result.html',{'ans':x})
     
