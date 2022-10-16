@@ -15,7 +15,7 @@ SECRET_KEY = 'rq20_n5m_6#w@gcg!^=p6nh&3-545a$%9zge&xwp*a_z53kz#='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [   ]
+ALLOWED_HOSTS = ["thewordlesolver.herokuapp.com"]
 
 
 # Application definition
